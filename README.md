@@ -1,6 +1,6 @@
 # Mi Agenda de Contactos
 
-Proyecto web para Programación 2. Es una agenda personal para crear, buscar, editar, eliminar y destacar contactos. No usa frameworks ni necesita servidor.
+Mi TP para Programación. Es una lista de contactos personal para crear, buscar, editar, eliminar y destacar contactos. No usa frameworks ni necesita servidor.
 
 ## Cómo usarlo
 
