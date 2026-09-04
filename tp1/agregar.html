@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para crear o editar un contacto.">
+    <title>Mi Agenda | Añadir contacto</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  
+    <header class="encabezado-principal">
+        <nav class="navegacion contenedor" aria-label="Navegación principal">
+            <a class="logo" href="index.html"><span>●</span> Mi Agenda</a>
+            <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <div class="enlaces-menu">
+                <a href="index.html">Inicio</a>
+                <a href="contactos.html">Contactos</a>
+                <a class="activo" href="agregar.html">Añadir</a>
+                <a href="favoritos.html">Favoritos</a>
+                <button class="boton-tema" type="button" aria-label="Cambiar tema">☀</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor pagina">
+        <div class="encabezado-formulario">
+            <p class="etiqueta">FORMULARIO</p>
+            <h1 id="titulo-formulario">Añadir contacto</h1>
+            <p>Los campos con * son obligatorios.</p>
+        </div>
+
+        <form id="formulario-contacto" class="formulario" novalidate>
+            <input type="hidden" id="id-contacto">
+
+            <div class="campo doble">
+                <div>
+                    <label for="nombre">Nombre *</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Ej.: Sofía" required minlength="2">
+                    <small></small>
+                </div>
+                <div>
+                    <label for="apellido">Apellido *</label>
+                    <input id="apellido" name="apellido" type="text" placeholder="Ej.: García" required minlength="2">
+                    <small></small>
+                </div>
+            </div>
+
+            <div class="campo doble">
+                <div>
+                    <label for="telefono">Teléfono *</label>
+                    <input id="telefono" name="telefono" type="tel" placeholder="Ej.: 11 1234 5678" required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico *</label>
+                    <input id="correo" name="correo" type="email" placeholder="Ej.: sofia@email.com" required>
+                    <small></small>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="direccion">Dirección *</label>
+                <input id="direccion" name="direccion" type="text" placeholder="Ej.: Av. Siempre Viva 123" required minlength="5">
+                <small></small>
+            </div>
+
+            <div class="campo doble">
+                <div>
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input id="nacimiento" name="nacimiento" type="date">
+                    <small></small>
+                </div>
+                <div>
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria">
+                        <option value="Amigo/a">Amigo/a</option>
+                        <option value="Familia">Familia</option>
+                        <option value="Trabajo">Trabajo</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <fieldset class="campo">
+                <legend>Medio de contacto preferido</legend>
+                <div class="opciones">
+                    <label><input type="radio" name="preferencia" value="Teléfono" checked> Teléfono</label>
+                    <label><input type="radio" name="preferencia" value="Correo"> Correo</label>
+                </div>
+            </fieldset>
+
+            <div class="campo foto-campo">
+                <label for="foto">Foto de perfil <span>(opcional)</span></label>
+                <input id="foto" name="foto" type="file" accept="image/*">
+                <small>Si no elegís una, se usa una imagen predeterminada.</small>
+                <img id="vista-previa" src="assets/img/avatar-predeterminado.svg" alt="Vista previa de la foto">
+            </div>
+
+            <label class="casilla">
+                <input id="favorito" name="favorito" type="checkbox"> Marcar como contacto favorito
+            </label>
+
+            <div class="acciones-formulario">
+                <a class="boton boton-secundario" href="contactos.html">Cancelar</a>
+                <button class="boton boton-principal" type="submit">Guardar contacto</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Mi Agenda · Proyecto de Programación 2</p>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
