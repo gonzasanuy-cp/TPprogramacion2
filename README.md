@@ -13,7 +13,7 @@ Los contactos y la preferencia de tema se guardan en `localStorage`: permanecen 
 ## Estructura
 
 ```text
-mi-agenda/
+tp1/
 ├── index.html              # Página de bienvenida
 ├── contactos.html          # Lista, buscador y ordenamiento
 ├── agregar.html            # Alta y edición de contactos
